@@ -33,7 +33,18 @@ export class AppComponent implements OnInit {
 
   getProductsByCat(c : any){
     this.currentCategory = c;
-    this.router.navigateByUrl('/products/2/'+ c.id);
+    if (c.name =="Computers"){this.router.navigate(['/products/2/1']).then(() => {
+      window.location.reload();
+    });}
+    if (c.name =="Printers"){this.router.navigateByUrl('/products/2/2').then(() => {
+      window.location.reload();
+    });}
+    if (c.name =="Smartphones"){this.router.navigateByUrl('/products/2/3').then(() => {
+      window.location.reload();
+    });}
+
+
+    
   }
 
   onSelectedProducts() {
