@@ -1,8 +1,9 @@
 <app-header></app-header>
 <div class="container">
    <div class="col-md-3">
+     
      <ul class="list-group" *ngIf="categories">
-       <mat-card [ngClass]="currentCategory==c?'active':''" (click)="getProductsByCat(c)" class="list-group-item clickable" *ngFor="let c of categories._embedded.categories">
+       <mat-card [ngClass]="currentCategory==c?'active':''" (click)="getProductsByCat(c)" class="cursor-pointer bg-transparent hover:bg-blue-500 text-blue-700 font-semibold hover:text-white py-2 px-4 border border-blue-500 hover:border-transparent rounded" *ngFor="let c of categories._embedded.categories">
          {{c.name}}
        </mat-card>
      </ul>
